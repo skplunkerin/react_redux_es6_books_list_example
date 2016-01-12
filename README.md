@@ -1,4 +1,11 @@
-# ReduxSimpleStarter
+# ReduxSimpleStarter (forked)
+
+This project was forked from [StephenGrider/ReduxSimpleStarter](https://github.com/StephenGrider/ReduxSimpleStarter) repo.
+I'm not liking the limitations of `webpack`, in particular: issues with in-consistency in recognizing file changes to trigger re-transforming code, and the long wait time for it to transform code. I've found much greater success utilizing `gulp`.
+
+This code base has been modified as I've been following the Udemy course [Modern React with Redux](https://www.udemy.com/react-redux).
+
+-------
 
 ###Getting Started###
 
