@@ -1,5 +1,6 @@
 module.exports = {
   entry: [
+    'webpack/hot/dev-server',
     './src/index.js'
   ],
   output: {
