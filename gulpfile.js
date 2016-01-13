@@ -68,7 +68,7 @@ gulp.task('dev', function(done){
 // Will run once to compile .scss to .css
 // $ gulp sass
 gulp.task('sass', function(){
-  gulp.src('./src/main.scss')
+  gulp.src('./src/stylesheets/main.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./public/'));
 });
@@ -76,5 +76,5 @@ gulp.task('sass', function(){
 // Will run to compile .scss to .css and watch for changes
 // $ gulp sass:watch
 gulp.task('sass:watch', function(){
-  gulp.watch('./src/main.scss', ['sass']);
+  gulp.watch('./src/stylesheets/main.scss', ['sass']);
 });
