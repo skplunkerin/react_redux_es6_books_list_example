@@ -5,7 +5,7 @@ import _ from 'lodash'; // this is the custom with using Lodash?
 import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
 import VideoDetail from './components/video_detail';
-const API_KEY = 'AIzaSyCWHPn7dM91QVekVh96cFwqVDzEDWOjdUo';
+const API_KEY = 'INSERT APIKEY HERE';
 
 // create a new component, this compoenent should produce some html
 // ES5: const App = function() {
