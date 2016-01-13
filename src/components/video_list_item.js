@@ -7,7 +7,6 @@ import React from 'react';
 // const VideoListItem = ({video}) => {
 // to grab multiple, separate with a comma:
 const VideoListItem = ({video, onVideoSelect}) => {
-  console.log(video);
   const imageUrl = video.snippet.thumbnails.default.url;
   return (
     <li className="list-group-item" onClick={() => onVideoSelect(video)}>

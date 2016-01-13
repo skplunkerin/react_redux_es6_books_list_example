@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import YTSearch from 'youtube-api-search';
+import _ from 'lodash'; // this is the custom with using Lodash?
 import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
 import VideoDetail from './components/video_detail';
@@ -17,11 +18,14 @@ class App extends Component {
       videos: [],
       selectedVideo: null
     };
+    this.videoSearch('surfboards');
+  }
 
+  videoSearch(term) {
     // ES5:
     // YTSearch({key: API_KEY, term: 'surfboards'}, function(data){
     // ES6:
-    YTSearch({key: API_KEY, term: 'surfboards'}, (videos) => {
+    YTSearch({key: API_KEY, term: term}, (videos) => {
       // since videos param is the same name as the key we're setting below
       // we can do this: (ES6 syntax, only works when key and property are the same variable name))
       // this.setState({ videos });
@@ -36,9 +40,11 @@ class App extends Component {
   }
 
   render() {
+    const videoSearch = _.debounce((term) => { this.videoSearch(term) }, 300);
     return (
       <div>
-        <SearchBar />
+        <SearchBar 
+          onSearchTermChange={videoSearch} />
         <VideoDetail video={this.state.selectedVideo} />
         <VideoList 
           onVideoSelect={selectedVideo => this.setState({selectedVideo})}
