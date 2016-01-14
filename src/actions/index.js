@@ -1,5 +1,5 @@
 export function selectBook(book) {
-  console.log('Book has been selected:', book.title)
+  console.log('Action triggered:', book)
   // selectBook is an ActionCreator, it needs to return an action,
   // an object with a type of property.
   return {
